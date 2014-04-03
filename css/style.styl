@@ -1,0 +1,684 @@
+font-size = 20px
+font = font-size Helvetica, sans-serif
+lineHeight = 28px
+lineHeight2 = 28px
+letterSpacing = .02em
+opacityOut = opacity .25s ease-out
+transitionAll = all .25s
+transitionOut = all .15s ease-out
+transformScale = translateZ(1) scale(1.0, 1.0)
+textColor = #000
+fittyPer = 50%
+translateFitty = translate(-50%, -50%)
+hoverColor = #fff
+menuWidth = 500px
+imgResize = 85%
+transition(n)
+  -webkit-transition n
+  -moz-transition n
+  -o-transition n
+  transition n
+transform(n)
+  -webkit-transform n
+  -moz-transform n
+  -o-transform n
+  transform n
+transformDeg = rotate(0deg)
+transformOrigin(n)
+  -webkit-transform-origin n
+  -moz-transform-origin n
+  -o-transform-origin n
+  transform-origin n
+transformPerc = 25% 0%
+backFace(n)
+  backface-visibility n
+  -webkit-backface-visibility n
+
+hawlinBg = black
+jazzBg = white
+segaBg = pink
+navsegdaBg = grey
+ballBg = beige
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+  border 0
+  font-size 100%
+  font inherit
+  vertical-align baseline
+  margin 0
+  padding 0
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+  display block
+
+body
+  line-height 1
+
+ol,ul
+  list-style none
+
+blockquote,q
+  quotes none
+
+blockquote:before,blockquote:after,q:before,q:after
+  content none
+
+table
+  border-collapse collapse
+  border-spacing 0
+
+html
+  background-color #ff0918
+
+body
+  font font
+  line-height  lineHeight
+  letter-spacing  letterSpacing
+
+.mobile-pub
+  display  none
+
+li 
+  display  block 
+  // float  left 
+  margin-right  10px 
+  position  relative 
+  padding-right  0.5em 
+  line-height lineHeight2
+
+// #main-ul > li:hover > #sp-ul
+// #main-ul > li:hover > #pub-ul
+//   opacity 1
+//   height auto
+//   overflow visible
+//   transition opacityOut
+
+a
+  color inherit
+  text-decoration none
+
+.shabazz-intro
+#pub-ul
+  padding-top  10px
+  margin-left 15px
+  width menuWidth
+  text-align left
+  
+
+.shabazz-intro
+  float left
+  a:hover
+    color hoverColor
+    border-bottom: 2px solid hoverColor
+
+
+#pub-ul
+  float right
+  display  block
+  // transition opacityOut
+  // opacity  0 
+  // height  0
+  // overflow  hidden
+  // position absolute 
+  // left  0
+  li
+    padding-top lineHeight2
+    line-height lineHeight2
+    clear both
+    a
+      display block
+    img
+      max-width 100px
+      float left
+      margin-right 10px
+
+.cart
+  position absolute
+  top 10px
+  right 15px
+  z-index 150
+
+.cartbtn
+.addcartbtn
+.minicart-submit
+  font font
+  line-height lineHeight
+  letter-spacing letterSpacing
+  background none
+  border none
+  color inherit
+  text-decoration none
+  cursor pointer
+  box-shadow 0px
+  padding 0px
+  margin 0px
+  border 0px
+  &:focus
+  /button:focus
+    box-shadow 0px
+    padding 0px
+    margin 0px
+    border 0px
+    outline none
+
+.addtocart
+  display inline
+  margin-left 10px
+
+.carttwo
+#info
+  position absolute
+  bottom 15px
+  left 15px
+
+.sp-intro
+  margin-top -(lineHeight)
+
+
+.sp-intro a
+.udln
+form.addtocart
+.shabazz-intro a
+.minicart-submit
+  border-bottom 2px solid
+  border-color inherit
+
+
+p.first
+  text-indent 165px
+
+p
+  margin-bottom lineHeight
+
+.link-title
+  position relative
+  z-index 100
+  // &:after
+  //   position absolute
+  //   margin-left 9px
+  //   float right
+  //   content "+"
+  //   width 25px
+  //   height 15px
+  //   opacity 1
+  //   transform transformDeg
+  //   transformOrigin transformPerc
+  //   transition transitionAll
+  //   backFace hidden
+  //   transform transformScale
+
+// #main-ul > li:hover > .link-title:after
+//     opacity 0
+
+// #main-ul > .pub-li:hover > .link-title:after
+//     margin-left 20px
+//     opacity 1
+//     transform rotate(45deg)
+//     transformOrigin 0px 0px
+//     transition transitionAll
+//     transform transformScale
+
+.booktitle
+    display block
+
+#img-container 
+  img
+    position absolute
+    max-width imgResize
+    max-height imgResize
+    top 10%
+    left 10%
+    z-index -400
+    &:empty
+      top fittyPer
+      left fittyPer
+      transform translateFitty
+      transform transformScale
+
+.imgdisplay
+  display visible
+
+#library
+  &:hover
+    color red
+
+#hawlin
+  &:hover
+    color green
+
+#jazz
+  &:hover
+    color red
+
+#sega
+  &:hover
+    color pink
+
+#navsegda
+  &:hover
+    color maroon
+
+#ball
+  &:hover
+    color brown
+
+#library-img
+#hawlin-img
+#jazz-img
+#sega-img
+#navsegda-img
+#ball-img
+    display none
+
+.bglibrary
+  color hoverColor
+  background-color textColor
+.bghawlin
+  color hoverColor
+  background-color hawlinBg
+.bgjazz
+  background-color jazzBg
+.bgsega
+  background-color segaBg
+.bgnavsegda
+  background-color navsegdaBg
+.bgball
+  background-color ballBg
+
+.bgfadelibrary
+  color hoverColor
+  background-color textColor
+  transition transitionOut
+.bgfadehawlin
+  color hoverColor !important
+  background-color hawlinBg
+  transition transitionOut
+.bgfadejazz
+  background-color jazzBg
+  transition transitionOut
+.bgfadesega
+  background-color segaBg
+  transition transitionOut
+.bgfadenavsegda
+  background-color navsegdaBg
+  transition transitionOut
+.bgfadeball
+  background-color ballBg
+  transition transitionOut
+
+
+/*slides    */
+
+#hawlin-gallery
+#jazz-gallery
+#sega-gallery
+#navsegda-gallery
+#ball-gallery
+    position absolute
+    overflow hidden
+    display none
+    z-index 150
+    width 100%
+    height 100%
+    top 0
+    left 0
+
+.box 
+  img
+    z-index 200
+    position absolute
+    max-width imgResize
+    max-height imgResize
+    display none
+    cursor pointer !important
+    &:empty
+      top fittyPer
+      left fittyPer
+      transform translateFitty
+      transform transformScale
+
+.slide-title
+  position absolute
+  top 10px
+  left 15px
+
+.imgslide
+  display none
+
+#intro-page
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  // background url('../img/etc/sp-silk.png')
+  background pink
+  z-index 5000
+  img
+    max-width 70%
+    max-height 100%
+    position absolute
+    top fittyPer
+    left fittyPer
+    transform translateFitty
+    transform transformScale
+
+input
+  border 0px
+  margin-left 0px
+  padding 0px
+
+.email-fm
+  margin 0px
+  padding 0px
+
+.email
+  font font
+  letter-spacing letterSpacing
+  display inline
+  width 176px
+  height 25px
+  color textColor
+  text-align left
+  padding 0px
+  margin-right 10px
+  line-height lineHeight
+  outline none
+  background-color transparent
+  cursor text
+  border-bottom 2px solid textColor
+  transition transitionOut
+  &:focus
+    width 220px
+  + .submitbtn
+    display none
+    transition transitionOut
+  &:focus + .submitbtn
+    display inline
+    font font
+    letter-spacing letterSpacing
+    border none
+    text-decoration none
+    cursor pointer
+    box-shadow 0px
+    padding 0px 1px
+    margin 0px
+    border 0px
+    color textColor
+
+.submitbtn
+    font font
+    line-height: lineHeight
+    letter-spacing: letterSpacing
+    background: none;
+    border: 2px solid textColor;
+    color: textColor;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+
+
+::-webkit-input-placeholder
+  color textColor
+:-moz-placeholder
+  color textColor
+::-moz-placeholder
+  color textColor
+:-ms-input-placeholder
+  color textColor
+
+
+/*   minicart   */
+
+#PPMiniCart 
+  display: none;
+  position: fixed;
+  top: fittyPer
+  left: fittyPer
+  transform translateFitty
+  z-index: 350;
+  .minicart-title
+    float left
+    margin -10px -10px 0
+    padding 10px
+    background 0
+    border 0
+    font-size 20px
+    cursor pointer
+    position absolute
+    top 12px
+  .minicart-showing &
+    display block
+    top fittyPer
+    left fittyPer
+    backFace hidden
+    transform translateFitty
+  form
+    position relative
+    width 600px
+    max-height 400px
+    margin-left 0px
+    padding 10px 10px 40px 
+    background hoverColor
+    border 0px
+    border-radius 0px
+    box-shadow 0px 0px 0px rgba(0, 0, 0, 0)
+    font font
+    color #000
+  form.minicart-empty
+    padding-bottom 10px
+    font font
+  ul
+    clear left
+    margin 50px 0px 21px 0px
+    list-style-type none
+    background transparent 
+    border 0px
+    border-radius 0px
+    box-shadow 0px 0px 0px rgba(0, 0, 0, 0)
+  .minicart-empty ul
+    display none
+  .minicart-closer
+    float right
+    margin -12px -10px 0 
+    padding 10px 
+    background 0
+    border 0
+    font font
+    cursor pointer
+  .minicart-item
+    position relative
+    padding 3px 0
+    min-height 17px
+    float none
+    font-size 20px
+    line-height 7px
+    a
+      position absolute
+      top 11px
+      left 0
+      width 350px
+      color #333
+      line-height 12px
+      text-decoration none
+  .minicart-attributes
+    margin 18px 0 0
+    padding 0
+    border 0
+    border-radius 0
+    box-shadow none
+    color #999
+    font-size 12px
+    line-height 22px
+    li
+      display inline
+      &:after
+        content ","
+    li:last-child:after
+      content ""
+  .minicart-quantity
+    position absolute
+    top -4px
+    left 430px
+    width 24px
+    height 21px
+    padding 0px 4px
+    font-size 19px
+    text-align right
+    transition border linear 0.2s, box-shadow linear 0.2s
+    -webkit-transition border linear 0.2s, box-shadow linear 0.2s
+    -moz-transition border linear 0.2s, box-shadow linear 0.2s
+    &:hover
+      border-color #0078C1
+    &:focus
+      border-color #0078C1
+      outline 0
+      box-shadow inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(0, 120, 193, 0.4)
+  .minicart-remove
+    position absolute
+    top -7px
+    left 462px
+    width 18px
+    height 23px
+    margin 0
+    padding 0
+    background #fff
+    border 1px solid #fff
+    color red
+    font-size 20px
+    opacity 1
+    cursor pointer
+    &:hover
+      opacity .5
+  .minicart-price
+    position absolute
+    top 3px
+    right 0
+  .minicart-subtotal
+    position absolute
+    bottom 17px
+    left 10px
+    font-size 20px
+    color red
+  .minicart-submit
+    position absolute
+    bottom 12px
+    right 10px
+    cursor pointer
+    img
+      vertical-align middle
+      padding 4px 0 0 2px
+
+
+/*MEDIA QUERIES*/
+
+/* breakpoint 1 */
+
+@media screen and (max-width: 880px) {
+
+    html{
+        background-color: #e6000e;
+    }
+
+}
+
+
+/* breakpoint 2 */
+
+@media screen and (max-width: 768px) {
+
+    html{
+        background-color: #c4000c;
+    }
+
+}
+
+/* breakpoint 3 */
+
+
+@media (max-width: 500px) and (min-width: 0px) {
+
+    html{
+        background-color: #a2000a;
+    }
+
+}
+
+/* ipad */
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+    html{
+        background-color: #800008;
+    }
+
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+    html{
+        background-color: #5e0006;
+    }
+
+}
+
+
+/* sp (landscape) ----------- */
+/*@media only screen and (min-device-width : 321px) {
+}*/
+
+/* sp (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+    html{
+        background-color: #ff0918;
+    }
+
+    body {
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: .02em;
+    }
+
+    #main-ul {
+        padding-top: 3px;
+    }
+
+    .sp-li {
+        margin-left: 5px;
+    }
+
+    .shabazz-intro {
+        position: static;
+        float: left;
+        width: 310px;
+    }
+
+    .pub-li, .cart{
+        display: none;
+    }
+
+    .mobile-pub{
+        margin-top: 28px;
+        display: block;
+        float: left;
+        margin-left: 5px;
+        width: 310px;
+    }
+
+    .mob-blade{
+        margin: 28px 0px;
+        text-align: center;
+    }
+
+    .slide-mob img{
+        width: 100%;
+    }
+
+
+
+}

@@ -9,12 +9,13 @@
         <title>Shabazz Projects</title>
         <meta name="description" content="Shabazz Projects is a progressive publishing platform focusing on books and objects with an emphasis on contemporary artists, photography, and design.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
         <link type="text/css" rel="stylesheet" href="/css/style.css" />
 
     </head>
     <body>
 
-<!--    <div id="intro-page"></div> -->
+   		<div id="intro-page"><img src="img/etc/sp-splash.png"><img src="img/etc/ass.gif"></div>
 
 	    <div class="cart">
 	    	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
@@ -27,29 +28,22 @@
             </form>
 	    </div>
 
-	    
+    	<div class="shabazz-intro">
+    		<p><span class="bgcolor">Shabazz Projects is a progressive publishing</span> platform focusing on books and objects with an emphasis on contemporary artists, photography, and design.</p>
+            <p>We (<a href="http://www.hassanrahim.com">Hassan Rahim</a> & <a href="http://www.brianokarski.com">Brian Okarski</a>) just completed the LA Art Book Fair with our friends <a href="http://www.thisiscatalogue.co.uk/">Catalogue</a>, who we had the pleasure of sharing a booth with. Catalogue invited us to create the supplement for <a class="intro-a" id="library" href="http://librarypaper.com/">Library Paper No. 4.</a></p>
+            To keep in touch, like us on <a href="https://www.facebook.com/shabazzprojects">Facebook</a>, follow us
+           	<form class="email-fm"><label>on <a href="http://www.soundcloud.com/shabazz-projects">Soundcloud</a>, or </label><input class="email" type="email" placeholder="join our mailing list." onfocus="this.placeholder = ''" onblur="this.placeholder = 'join our mailing list.'" /><input type='submit' class="submitbtn" value='Join' /></form></div>
 
-		<ul id="main-ul">
-		    <li class="sp-li">
-		    	<div class="shabazz-intro">
-		    		<p><span class="bgcolor">Shabazz Projects is a progressive publishing</span> platform focusing on books and objects with an emphasis on contemporary artists, photography, and design.</p>
-		            <p>We (<a href="http://www.hassanrahim.com">Hassan Rahim</a> & <a href="http://www.brianokarski.com">Brian Okarski</a>) just completed the LA Art Book Fair with our friends <a href="http://www.thisiscatalogue.co.uk/">Catalogue</a>, who we had the pleasure of sharing a booth with. Catalogue invited us to create the supplement for <a class="intro-a" id="library" href="http://librarypaper.com/">Library Paper No. 4.</a></p>
-		            To keep in touch, like us on <a href="https://www.facebook.com/shabazzprojects">Facebook</a>, follow us
-		           	<form class="email-fm"><label>on <a href="http://www.soundcloud.com/shabazz-projects">Soundcloud</a>, or </label><input class="email" type="email" placeholder="join our mailing list." onfocus="this.placeholder = ''" onblur="this.placeholder = 'join our mailing list.'" /><input type='submit' class="submitbtn" value='Join' /></form></div>
-
-			    </div>
-		    </li>
-		    <li class="pub-li">
-		        <div class="link-title">Publications in print</div>
-		        <ul id="pub-ul">
-		            <li><a id="hawlin" class="pub-a" href=""><span class="booktitle"><span class="udln">Sorted By Size</span></span>by Haw-Lin Services</a></li>
-		            <li><a id="jazz" class="pub-a" href=""><span class="booktitle"><span class="udln">Jazz</span></span>by Eric Wrenn & Antje Peters</a></li>
-		            <li><a id="sega" class="pub-a" href=""><span class="booktitle"><span class="udln">Sega Sega</span></span>by Amanny Ahmad</a></li>
-		            <li><a id="navsegda" class="pub-a" href=""><span class="booktitle"><span class="udln">Navsegda</span></span>by Erik Hart & Tatiana Leshkina</a></li>
-		            <li><a id="ball" class="pub-a" href=""><span class="booktitle"><span class="udln">Various Basketball Hoops</span></span>by Ben Barretto, Trevor Hernandez,<br/>Hassan Rahim, & Amanny Ahmad</a></li>
-			    </ul>
-		    </li>
-		</ul>
+	    </div>
+        
+        <ul id="pub-ul">
+        	<div class="link-title">Library:</div>
+            <li><a id="hawlin" class="pub-a" href=""><img src="img/etc/thumbs/1.png"><span class="booktitle"><span class="udln">Sorted By Size</span></span>by Haw-Lin Services</a></li>
+            <li><a id="jazz" class="pub-a" href=""><img src="img/etc/thumbs/2.png"><span class="booktitle"><span class="udln">Jazz</span></span>by Eric Wrenn & Antje Peters</a></li>
+            <li><a id="sega" class="pub-a" href=""><img src="img/etc/thumbs/3.png"><span class="booktitle"><span class="udln">Sega Sega</span></span>by Amanny Ahmad</a></li>
+            <li><a id="navsegda" class="pub-a" href=""><img src="img/etc/thumbs/4.png"><span class="booktitle"><span class="udln">Navsegda</span></span>by Erik Hart & Tatiana Leshkina</a></li>
+            <li><a id="ball" class="pub-a" href=""><img src="img/etc/thumbs/5.png"><span class="booktitle"><span class="udln">Various Basketball Hoops</span></span>by Ben Barretto, Trevor Hernandez,<br/>Hassan Rahim, & Amanny Ahmad</a></li>
+	    </ul>
 
 
 		<div id="img-container">
@@ -60,8 +54,6 @@
 			<img src="/img/navsegda/1.jpg" id="navsegda-img">
 			<img src="/img/ball/1.jpg" id="ball-img">
 		</div>
-
-		<div id="empt"></div>
 
 		<div id="hawlin-gallery">
 			<div class="slide-title">
@@ -205,11 +197,6 @@
 
 
 
-
-
-
-
-
 		<div class="mobile-pub">
 		Publications in print:
 			<div class="mob-blade">
@@ -220,11 +207,11 @@
 				    data-cycle-speed="250"
 				    data-cycle-swipe=true
 				    >
-					<img src="img/1.jpg">
-					<img src="img/2.jpg">
-					<img src="img/3.jpg">
-					<img src="img/4.jpg">
-					<img src="img/5.jpg">
+					<img src="img/hawlin/1.jpg">
+					<img src="img/hawlin/2.jpg">
+					<img src="img/hawlin/3.jpg">
+					<img src="img/hawlin/4.jpg">
+					<img src="img/hawlin/5.jpg">
 			    </div>
 				<div class="slide-title-mob">
 					<span class="booktitle-mob">Sorted By Size</span> by Haw-Lin Services
@@ -238,7 +225,7 @@
 
 			<div class="mob-blade">
 				<div class="slide-mob">
-					<img src="img/5.jpg">
+					<img src="img/jazz/5.jpg">
 			    </div>
 				<div class="slide-title-mob">
 					<span class="booktitle-mob">Jazz</span> by Eric Wrenn & Antje Peters
@@ -252,7 +239,7 @@
 
 			<div class="mob-blade">
 				<div class="slide-mob">
-					<img src="img/6.jpg">
+					<img src="img/sega/6.jpg">
 			    </div>
 				<div class="slide-title-mob">
 					<span class="booktitle-mob">Sega Sega</span> by Amanny Ahmad
@@ -266,7 +253,7 @@
 
 			<div class="mob-blade">
 				<div class="slide-mob">
-					<img src="img/4.jpg">
+					<img src="img/navsegda/4.jpg">
 			    </div>
 				<div class="slide-title-mob">
 					<span class="booktitle-mob">Navsegda</span> by Erik Hart & Tatiana Leshkina
@@ -280,7 +267,7 @@
 
 			<div class="mob-blade">
 				<div class="slide-mob">
-					<img src="img/3.jpg">
+					<img src="img/ball/3.jpg">
 			    </div>
 				<div class="slide-title-mob">
 					<span class="booktitle-mob">Various Basketball Hoops</span> by Ben Barretto, Trevor Hernandez,<br/>Hassan Rahim, & Amanny Ahmad
@@ -292,8 +279,6 @@
 			</div>
 
 		</div>
-
-
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="/js/jquery.cycle2.js"></script>

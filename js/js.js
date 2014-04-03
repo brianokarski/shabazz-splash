@@ -3,7 +3,7 @@ $(document).ready(function() {
     paypal.minicart.render();
 
 
-    // $('#intro-page').delay(3000).fadeOut(200);
+    $('#intro-page').delay(1000).fadeOut(400);
 
 
 
