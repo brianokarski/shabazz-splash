@@ -13,6 +13,11 @@ translateFitty = translate(-50%, -50%)
 hoverColor = #fff
 menuWidth = 500px
 imgResize = 85%
+box-shadow(args...)
+    -webkit-box-shadow args
+    -moz-box-shadow args
+    box-shadow args
+
 transition(n)
   -webkit-transition n
   -moz-transition n
@@ -131,6 +136,9 @@ a
       max-width 100px
       float left
       margin-right 10px
+
+.thumb
+  box-shadow rgba(0, 0, 0, 0.3) 3px 3px 7px
 
 .cart
   position absolute
