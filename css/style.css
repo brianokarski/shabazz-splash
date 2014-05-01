@@ -127,6 +127,7 @@ body {
   font: 20px Helvetica, sans-serif;
   line-height: 28px;
   letter-spacing: 0.02em;
+  min-width: 1200px;
 }
 .mobile-pub {
   display: none;
@@ -170,7 +171,7 @@ a {
   display: block;
 }
 #pub-ul li img {
-  max-width: 100px;
+  max-width: 60px;
   float: left;
   margin-right: 10px;
 }
@@ -276,19 +277,19 @@ p {
   color: #f00;
 }
 #hawlin:hover {
-  color: #008000;
+  color: #fff;
 }
 #jazz:hover {
   color: #f00;
 }
 #sega:hover {
-  color: #ffc0cb;
+  color: #00f;
 }
 #navsegda:hover {
   color: #800000;
 }
 #ball:hover {
-  color: #a52a2a;
+  color: #2b180b;
 }
 #library-img,
 #hawlin-img,
@@ -411,7 +412,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffc0cb;
+  background: #000;
   z-index: 5000;
 }
 #intro-page img {
