@@ -1,5 +1,6 @@
 font-size = 20px
-font = font-size Helvetica, sans-serif
+font = font-size 'sp0001'
+fontAlt = font-size 'sp0002', Times, serif
 lineHeight = 28px
 lineHeight2 = 28px
 letterSpacing = .02em
@@ -86,18 +87,10 @@ body
 
 li 
   display  block 
-  // float  left 
   margin-right  10px 
   position  relative 
   padding-right  0.5em 
   line-height lineHeight2
-
-// #main-ul > li:hover > #sp-ul
-// #main-ul > li:hover > #pub-ul
-//   opacity 1
-//   height auto
-//   overflow visible
-//   transition opacityOut
 
 a
   color inherit
@@ -117,17 +110,58 @@ a
     color hoverColor
     border-bottom: 2px solid hoverColor
 
+.info 
+  position fixed
+  z-index 99999
+  top 19px
+  height 25px
+  width 10px
+  left 15px
+  display inline-block
+  cursor pointer
+  font-size 20px
+  color black
+
+.active
+  color segaBg
+
+.drawer
+  font fontAlt
+  font-size 33px
+  line-height 43px
+  height 48%
+  width 100%
+  left 0px
+  right 0px
+  top 0px
+  display none
+  background-color black
+  position fixed
+  color #fff
+  text-align center
+  padding 18px 0px
+  z-index 9999
+  a
+    display inline-block
+    border-bottom 1px solid
+    border-bottom-color white
+    margin-bottom -15px
+  .left
+  .right
+    width 45%
+    float left
+    text-align left
+    padding 40px
+  .left
+    border-right 1px solid
+    border-right-color pink
+    padding-bottom 20px
+
 
 #pub-ul
   float right
   display  block
   margin-right 150px
-  // transition opacityOut
-  // opacity  0 
-  // height  0
-  // overflow  hidden
-  // position absolute 
-  // left  0
   li
     padding-top lineHeight2
     line-height lineHeight2
@@ -203,30 +237,6 @@ p
 .link-title
   position relative
   z-index 100
-  // &:after
-  //   position absolute
-  //   margin-left 9px
-  //   float right
-  //   content "+"
-  //   width 25px
-  //   height 15px
-  //   opacity 1
-  //   transform transformDeg
-  //   transformOrigin transformPerc
-  //   transition transitionAll
-  //   backFace hidden
-  //   transform transformScale
-
-// #main-ul > li:hover > .link-title:after
-//     opacity 0
-
-// #main-ul > .pub-li:hover > .link-title:after
-//     margin-left 20px
-//     opacity 1
-//     transform rotate(45deg)
-//     transformOrigin 0px 0px
-//     transition transitionAll
-//     transform transformScale
 
 .booktitle
     display block
@@ -361,12 +371,11 @@ p
   left 0
   width 100%
   height 100%
-  // background url('../img/etc/sp-silk.png')
   background black
   z-index 5000
   img
-    max-width 70%
-    max-height 100%
+    max-width 60%
+    max-height 70%
     position absolute
     top fittyPer
     left fittyPer
@@ -585,6 +594,23 @@ input
 p.minicart-empty-text
   margin-top 50px
   margin-bottom 2px
+
+/* fonts */
+
+@font-face
+    font-family 'sp0001'
+    src url('../font/sp001.woff') format('woff')
+    font-weight normal
+    font-style normal
+
+
+
+
+@font-face
+    font-family 'sp0002'
+    src url('../font/sp002.woff') format('woff')
+    font-weight normal
+    font-style normal
 
 
 

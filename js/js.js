@@ -5,7 +5,10 @@ $(document).ready(function() {
 
     $('#intro-page').delay(1000).fadeOut(400);
 
-
+    $(".info").click(function () {
+        $(this).toggleClass( "active" );
+        $(".drawer").slideToggle("fast");
+    });
 
     $(".pub-a, .intro-a").hover(function() {
             link_id = $(this).attr('id');
@@ -43,14 +46,6 @@ $(document).ready(function() {
 
             $('#' + link_id + '-gallery .box').empty();
             e.preventDefault();
-        });
-
-        $('a.slide-left').click(function() {
-            prevSlide($(this).parents('#' + link_id + '-gallery').find('.box'));
-        });
-        //clicking image goes to next slide
-        $('a.slide-right, #' + link_id + '-gallery img').click(function() {
-            nextSlide($(this).parents('#' + link_id + '-gallery').find('.box'));
         });
 
         //initialize show

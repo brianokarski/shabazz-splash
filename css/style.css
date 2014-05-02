@@ -124,7 +124,7 @@ html {
   background-color: #ff0918;
 }
 body {
-  font: 20px Helvetica, sans-serif;
+  font: 20px 'sp0001';
   line-height: 28px;
   letter-spacing: 0.02em;
   min-width: 1200px;
@@ -156,6 +156,56 @@ a {
 .shabazz-intro a:hover {
   color: #fff;
   border-bottom: 2px solid #fff;
+}
+.info {
+  position: fixed;
+  z-index: 99999;
+  top: 19px;
+  height: 25px;
+  width: 10px;
+  left: 15px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+}
+.active {
+  color: #ffc0cb;
+}
+.drawer {
+  font: 20px 'sp0002', Times, serif;
+  font-size: 33px;
+  line-height: 43px;
+  height: 48%;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  display: none;
+  background-color: #000;
+  position: fixed;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0px;
+  z-index: 9999;
+}
+.drawer a {
+  display: inline-block;
+  border-bottom: 1px solid;
+  border-bottom-color: #fff;
+  margin-bottom: -15px;
+}
+.drawer .left,
+.drawer .right {
+  width: 45%;
+  float: left;
+  text-align: left;
+  padding: 40px;
+}
+.drawer .left {
+  border-right: 1px solid;
+  border-right-color: #ffc0cb;
+  padding-bottom: 20px;
 }
 #pub-ul {
   float: right;
@@ -189,7 +239,7 @@ a {
 .cartbtn,
 .addcartbtn,
 .minicart-submit {
-  font: 20px Helvetica, sans-serif;
+  font: 20px 'sp0001';
   line-height: 28px;
   letter-spacing: 0.02em;
   background: none;
@@ -416,8 +466,8 @@ p {
   z-index: 5000;
 }
 #intro-page img {
-  max-width: 70%;
-  max-height: 100%;
+  max-width: 60%;
+  max-height: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -440,7 +490,7 @@ input {
   padding: 0px;
 }
 .email {
-  font: 20px Helvetica, sans-serif;
+  font: 20px 'sp0001';
   letter-spacing: 0.02em;
   display: inline;
   width: 176px;
@@ -471,7 +521,7 @@ input {
 }
 .email:focus + .submitbtn {
   display: inline;
-  font: 20px Helvetica, sans-serif;
+  font: 20px 'sp0001';
   letter-spacing: 0.02em;
   border: none;
   text-decoration: none;
@@ -485,7 +535,7 @@ input {
   color: #000;
 }
 .submitbtn {
-  font: 20px Helvetica, sans-serif;
+  font: 20px 'sp0001';
   line-height: 28px;
   letter-spacing: 0.02em;
   background: none;
@@ -558,12 +608,12 @@ input {
   -webkit-box-shadow: 0px 0px 0px rgba(0,0,0,0);
   -moz-box-shadow: 0px 0px 0px rgba(0,0,0,0);
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
-  font: 20px Helvetica, sans-serif;
+  font: 20px 'sp0001';
   color: #000;
 }
 #PPMiniCart form.minicart-empty {
   padding-bottom: 10px;
-  font: 20px Helvetica, sans-serif;
+  font: 20px 'sp0001';
 }
 #PPMiniCart ul {
   clear: left;
@@ -585,7 +635,7 @@ input {
   padding: 10px;
   background: 0;
   border: 0;
-  font: 20px Helvetica, sans-serif;
+  font: 20px 'sp0001';
   cursor: pointer;
 }
 #PPMiniCart .minicart-item {
@@ -695,6 +745,19 @@ input {
 p.minicart-empty-text {
   margin-top: 50px;
   margin-bottom: 2px;
+}
+/* fonts */
+@font-face {
+  font-family: 'sp0001';
+  src: url("../font/sp001.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sp0002';
+  src: url("../font/sp002.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 /*MEDIA QUERIES*/
 /* breakpoint 1 */
