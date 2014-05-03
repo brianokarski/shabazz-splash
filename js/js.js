@@ -10,6 +10,10 @@ $(document).ready(function() {
         $(".drawer").slideToggle("fast");
     });
 
+    $(".drawer").click(function () {
+        $(this).slideToggle("fast");
+    });
+
     $(".pub-a, .intro-a").hover(function() {
             link_id = $(this).attr('id');
             $("html").addClass("bgfade" + link_id);

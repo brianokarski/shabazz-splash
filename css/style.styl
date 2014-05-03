@@ -82,6 +82,34 @@ body
   letter-spacing  letterSpacing
   min-width 1200px
 
+#intro-page
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background black
+  z-index 5000
+  img
+    max-width 60%
+    max-height 70%
+    position absolute
+    top fittyPer
+    left fittyPer
+    transform translateFitty
+    transform transformScale
+
+.guide
+  top fittyPer
+  left fittyPer
+  transform translateFitty
+  transform transformScale
+  width 1px
+  height 100%
+  background-color pink
+  position fixed
+  z-index 149
+
 .mobile-pub
   display  none
 
@@ -110,7 +138,7 @@ a
     color hoverColor
     border-bottom: 2px solid hoverColor
 
-.info 
+.logo
   position fixed
   z-index 99999
   top 19px
@@ -118,9 +146,11 @@ a
   width 10px
   left 15px
   display inline-block
-  cursor pointer
   font-size 20px
   color black
+  .info
+    cursor pointer
+  
 
 .active
   color segaBg
@@ -140,7 +170,8 @@ a
   color #fff
   text-align center
   padding 18px 0px
-  z-index 9999
+  z-index 148
+  backFace hidden
   a
     display inline-block
     border-bottom 1px solid
@@ -153,9 +184,9 @@ a
     text-align left
     padding 40px
   .left
-    border-right 1px solid
-    border-right-color pink
-    padding-bottom 20px
+    // border-right 1px solid
+    // border-right-color pink
+    // padding-bottom 20px
 
 
 #pub-ul
@@ -365,22 +396,6 @@ p
 .imgslide
   display none
 
-#intro-page
-  position absolute
-  top 0
-  left 0
-  width 100%
-  height 100%
-  background black
-  z-index 5000
-  img
-    max-width 60%
-    max-height 70%
-    position absolute
-    top fittyPer
-    left fittyPer
-    transform translateFitty
-    transform transformScale
 
 input
   border 0px
