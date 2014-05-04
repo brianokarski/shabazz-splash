@@ -123,6 +123,7 @@ table {
 html {
   background-color: #ff0918;
   overflow: hidden;
+  text-rendering: optimizeLegibility;
 }
 body {
   font: 20px 'sp0001';
@@ -188,7 +189,6 @@ a {
   left: 20px;
   display: inline-block;
   font-size: 20px;
-  color: #000;
 }
 .logo .info {
   cursor: pointer;
@@ -218,7 +218,8 @@ a {
   -webkit-backface-visibility: hidden;
   overflow: hidden;
 }
-.drawer a {
+.drawer a,
+.drawer .submitbtn {
   display: inline-block;
   border-bottom: 1px solid;
   border-bottom-color: #f00;
@@ -228,7 +229,8 @@ a {
   -o-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
-.drawer a:hover {
+.drawer a:hover,
+.drawer .submitbtn:hover {
   color: #f00;
 }
 .drawer .left,
@@ -243,7 +245,7 @@ a {
 .drawer .left .caption,
 .drawer .right .caption {
   position: absolute;
-  bottom: 38px;
+  bottom: 35px;
   left: 0;
 }
 .drawer .left p,
@@ -285,10 +287,6 @@ a {
 }
 #pub-ul li a {
   display: block;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
 }
 #pub-ul li img {
   max-width: 60px;
@@ -455,14 +453,13 @@ p {
   background-color: #ffc0cb;
 }
 .bgnavsegda {
-  background-color: #808080;
+  background-color: #6a7ea8;
 }
 .bgball {
   background-color: #f5f5dc;
 }
 .bgoctane {
-  color: #fff;
-  background-color: #000;
+  background-color: #ddd;
 }
 .bgfadelibrary {
   color: #fff;
@@ -495,7 +492,7 @@ p {
   transition: all 0.15s ease-out;
 }
 .bgfadenavsegda {
-  background-color: #808080;
+  background-color: #6a7ea8;
   -webkit-transition: all 0.15s ease-out;
   -moz-transition: all 0.15s ease-out;
   -o-transition: all 0.15s ease-out;
@@ -509,8 +506,7 @@ p {
   transition: all 0.15s ease-out;
 }
 .bgfadeoctane {
-  color: #fff !important;
-  background-color: #000;
+  background-color: #ddd;
   -webkit-transition: all 0.15s ease-out;
   -moz-transition: all 0.15s ease-out;
   -o-transition: all 0.15s ease-out;
@@ -574,57 +570,33 @@ input {
   padding: 0px;
 }
 .email {
-  font: 20px 'sp0001';
+  font: 20px 'sp0002', Times, serif;
+  font-size: 28px;
   letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
   display: inline;
-  width: 176px;
-  height: 25px;
-  color: #000;
+  width: 340px;
+  height: 27px;
+  color: #fff;
   text-align: left;
-  padding: 0px;
   margin-right: 10px;
-  line-height: 28px;
   outline: none;
   background-color: transparent;
   cursor: text;
-  border-bottom: 2px solid #000;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+  border: 1px solid #fff;
+  padding: 5px;
 }
 .email:focus {
-  width: 220px;
-}
-.email + .submitbtn {
-  display: none;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-.email:focus + .submitbtn {
-  display: inline;
-  font: 20px 'sp0001';
-  letter-spacing: 0.02em;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-box-shadow: 0px;
-  -moz-box-shadow: 0px;
-  box-shadow: 0px;
-  padding: 0px 1px;
-  margin: 0px;
-  border: 0px;
-  color: #000;
+  width: 340px;
 }
 .submitbtn {
-  font: 20px 'sp0001';
-  line-height: 28px;
+  font: 20px 'sp0002', Times, serif;
+  font-size: 28px;
   letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
   background: none;
-  border: 2px solid #000;
-  color: #000;
+  border: none;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
   -webkit-box-shadow: 0px;
@@ -635,16 +607,16 @@ input {
   border: 0px;
 }
 ::-webkit-input-placeholder {
-  color: #000;
+  color: #fff;
 }
 :-moz-placeholder {
-  color: #000;
+  color: #fff;
 }
 ::-moz-placeholder {
-  color: #000;
+  color: #fff;
 }
 :-ms-input-placeholder {
-  color: #000;
+  color: #fff;
 }
 /*   minicart   */
 #PPMiniCart {
@@ -856,7 +828,7 @@ p.minicart-empty-text {
     font: 20px 'sp0002', Times, serif;
     -webkit-font-smoothing: antialiased;
     font-size: 25px;
-    line-height: 28px;
+    line-height: 30px;
     height: 380px;
     width: 100%;
     left: 0px;
@@ -874,8 +846,48 @@ p.minicart-empty-text {
   }
   .drawer .right .caption {
     position: absolute;
-    bottom: 80px;
+    bottom: 70px;
     left: 0;
+  }
+  .drawer .left p,
+  .drawer .right p {
+    margin-bottom: 25px;
+  }
+  .email {
+    font: 20px 'sp0002', Times, serif;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    display: inline;
+    width: 300px;
+    height: 24px;
+    color: #fff;
+    text-align: left;
+    margin-right: 10px;
+    outline: none;
+    background-color: transparent;
+    cursor: text;
+    border: 1px solid #fff;
+    padding: 5px;
+  }
+  .submitbtn {
+    font: 20px 'sp0002', Times, serif;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-box-shadow: 0px;
+    -moz-box-shadow: 0px;
+    -webkit-box-shadow: 0px;
+    -moz-box-shadow: 0px;
+    box-shadow: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
   }
 }
 /* breakpoint 2 */

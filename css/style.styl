@@ -44,9 +44,9 @@ backFace(n)
 hawlinBg = black
 jazzBg = white
 segaBg = pink
-navsegdaBg = grey
+navsegdaBg = #6a7ea8
 ballBg = beige
-octaneBg = black
+octaneBg = #ddd
 selectionColor = red
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
@@ -79,6 +79,7 @@ table
 html
   background-color #ff0918
   overflow hidden
+  text-rendering optimizeLegibility
 
 body
   font font
@@ -131,7 +132,6 @@ a
   left 20px
   display inline-block
   font-size 20px
-  color black
   .info
     cursor pointer
     color white
@@ -159,6 +159,7 @@ a
   backFace hidden
   overflow hidden
   a
+  .submitbtn
     display inline-block
     border-bottom 1px solid
     border-bottom-color red
@@ -176,7 +177,7 @@ a
     position relative
     .caption
       position absolute
-      bottom 38px
+      bottom 35px
       left 0
     p
       margin-bottom lineHeightalt
@@ -210,7 +211,6 @@ a
     margin-bottom -8px
     a
       display block
-      transition transitionOut
     img
       max-width 60px
       float left
@@ -368,7 +368,6 @@ p
 .bgball
   background-color ballBg
 .bgoctane
-  color hoverColor
   background-color octaneBg
 
 .bgfadelibrary
@@ -392,7 +391,6 @@ p
   background-color ballBg
   transition transitionOut
 .bgfadeoctane
-  color hoverColor !important
   background-color octaneBg
   transition transitionOut
 
@@ -450,62 +448,48 @@ input
   padding 0px
 
 .email
-  font font
+  font fontAlt
+  font-size 28px
   letter-spacing letterSpacing
+  -webkit-font-smoothing antialiased
   display inline
-  width 176px
-  height 25px
-  color textColor
+  width 340px
+  height 27px
+  color white
   text-align left
-  padding 0px
   margin-right 10px
-  line-height lineHeight
   outline none
   background-color transparent
   cursor text
-  border-bottom 2px solid textColor
-  transition transitionOut
+  border 1px solid white
+  padding 5px
   &:focus
-    width 220px
-  + .submitbtn
-    display none
-    transition transitionOut
-  &:focus + .submitbtn
-    display inline
-    font font
+    width 340px
+
+.submitbtn
+    font fontAlt
+    font-size 28px
     letter-spacing letterSpacing
+    -webkit-font-smoothing antialiased
+    background none
     border none
+    color white
     text-decoration none
     cursor pointer
     box-shadow 0px
-    padding 0px 1px
+    padding 0px
     margin 0px
     border 0px
-    color textColor
-
-.submitbtn
-    font font
-    line-height: lineHeight
-    letter-spacing: letterSpacing
-    background: none;
-    border: 2px solid textColor;
-    color: textColor;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0px;
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
 
 
 ::-webkit-input-placeholder
-  color textColor
+  color white
 :-moz-placeholder
-  color textColor
+  color white
 ::-moz-placeholder
-  color textColor
+  color white
 :-ms-input-placeholder
-  color textColor
+  color white
 
 
 /*   minicart   */
@@ -685,7 +669,7 @@ p.minicart-empty-text
 font: 20px 'sp0002', Times, serif;
 -webkit-font-smoothing: antialiased;
 font-size: 25px;
-line-height: 28px;
+line-height: 30px;
 height: 380px;
 width: 100%;
 left: 0px;
@@ -704,8 +688,48 @@ overflow: hidden;
 
 .drawer .right .caption {
 position: absolute;
-bottom: 80px;
+bottom: 70px;
 left: 0;
+}
+
+.drawer .left p, .drawer .right p {
+margin-bottom: 25px;
+}
+
+.email {
+font: 20px 'sp0002', Times, serif;
+font-size: 24px;
+letter-spacing: 0.02em;
+-webkit-font-smoothing: antialiased;
+display: inline;
+width: 300px;
+height: 24px;
+color: #fff;
+text-align: left;
+margin-right: 10px;
+outline: none;
+background-color: transparent;
+cursor: text;
+border: 1px solid #fff;
+padding: 5px;
+}
+
+.submitbtn {
+font: 20px 'sp0002', Times, serif;
+font-size: 24px;
+letter-spacing: 0.02em;
+-webkit-font-smoothing: antialiased;
+background: none;
+border: none;
+color: #fff;
+text-decoration: none;
+cursor: pointer;
+-webkit-box-shadow: 0px;
+-moz-box-shadow: 0px;
+box-shadow: 0px;
+padding: 0px;
+margin: 0px;
+border: 0px;
 }
 
 }
