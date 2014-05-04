@@ -2,8 +2,8 @@ $(document).ready(function() {
 
     paypal.minicart.render();
 
-
     $('#intro-page').delay(1000).fadeOut(400);
+    $( ".guide" ).draggable({ axis: 'x' });
 
     $(".info").click(function () {
         $(".logo").addClass( "active" );
@@ -13,7 +13,7 @@ $(document).ready(function() {
             display: "block"
         }, 200);
 
-        $(".drawer").click(function () {
+        $(".exit").click(function () {
             $(".logo").removeClass( "active" );
             $(".drawer").animate({
                 top: "-536px",
@@ -22,9 +22,9 @@ $(document).ready(function() {
         });
     });
 
-    $(".drawer").click(function () {
-        $(this).slideToggle("fast");
-    });
+    // $(".drawer").click(function () {
+    //     $(this).slideToggle("fast");
+    // });
 
     $(".pub-a, .intro-a").hover(function() {
             link_id = $(this).attr('id');
@@ -36,10 +36,12 @@ $(document).ready(function() {
             $("#" + link_id + "-img").hide();
         });
 
+    //enter bookdetail
     $('.pub-a').click(function(e) {
         link_id = $(this).attr('id');
         e.preventDefault();
 
+        //fadein bookdetail
         $('#' + link_id + '-gallery').fadeIn({
             position: 'absolute',
             width: '100%',
@@ -48,8 +50,17 @@ $(document).ready(function() {
             right: '0',
         }, 0).addClass("bg" + link_id);
 
-        $('#' + link_id + '-gallery .box').append('<img src="./img/' + link_id + '/1.jpg"><img src="./img/' + link_id + '/2.jpg"><img src="./img/' + link_id + '/3.jpg"><img src="./img/' + link_id + '/4.jpg"><img src="./img/' + link_id + '/5.jpg"><img src="./img/' + link_id + '/6.jpg"><img src="./img/' + link_id + '/7.jpg"><img src="./img/' + link_id + '/8.jpg">');
+        //start slideshow
+        $('#' + link_id + '-gallery .box').append('<img src="./img/' + link_id + '/1.jpg"><img src="./img/' + link_id + '/2.jpg"><img src="./img/' + link_id + '/3.jpg">');
+        
+        //<img src="./img/' + link_id + '/4.jpg"><img src="./img/' + link_id + '/5.jpg"><img src="./img/' + link_id + '/6.jpg"><img src="./img/' + link_id + '/7.jpg"><img src="./img/' + link_id + '/8.jpg">
 
+        //next slide
+        $('.box img').click(function() {
+            nextSlide($(this).parents('#' + link_id + '-gallery').find('.box'));
+        });
+
+        //exit bookdetail & empty
         $('.exit').click(function(e) {
 
             $('#' + link_id + '-gallery').fadeOut({
@@ -64,13 +75,13 @@ $(document).ready(function() {
             e.preventDefault();
         });
 
-        //initialize show
-        iniShow();
+        //initialize slideshow
+        initBookdetail();
 
-        function iniShow() {
+        function initBookdetail() {
             //show first image
             $('#' + link_id + '-gallery').each(function() {
-                $(this).find('img:first').show(0);
+                $(this).find('img:first').show(0).addClass("active");
             })
         }
 

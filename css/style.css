@@ -167,8 +167,9 @@ body {
   width: 1px;
   height: 100%;
   background-color: #f775f0;
-  position: fixed;
-  z-index: 149;
+  position: absolute;
+  z-index: 250;
+  cursor: ew-resize;
 }
 .mobile-pub {
   display: none;
@@ -200,10 +201,10 @@ a {
 }
 .logo {
   position: fixed;
-  z-index: 99999;
+  z-index: 160;
   top: 19px;
   height: 25px;
-  width: 200px;
+  width: 210px;
   left: 40px;
   display: inline-block;
   font-size: 20px;
@@ -211,44 +212,61 @@ a {
 }
 .logo .info {
   cursor: pointer;
+  color: #fff;
 }
 .active {
   color: #fff;
 }
 .drawer {
   font: 20px 'sp0002', Times, serif;
+  -webkit-font-smoothing: antialiased;
   font-size: 30px;
   line-height: 38px;
-  height: 420px;
+  height: 430px;
   width: 100%;
   left: 0px;
   right: 0px;
-  top: -470px;
+  top: -495px;
   background-color: #000;
   position: fixed;
   color: #fff;
   text-align: center;
-  padding-top: 50px;
-  z-index: 148;
+  padding-top: 65px;
+  z-index: 151;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 .drawer a {
   display: inline-block;
   border-bottom: 1px solid;
-  border-bottom-color: #fff;
+  border-bottom-color: #f00;
   margin-bottom: -15px;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.drawer a:hover {
+  color: #f00;
 }
 .drawer .left,
 .drawer .right {
-  width: 45%;
   float: left;
+  height: 400px;
+  width: calc(50% - 65px);
+  margin: 8px 25px 0 40px;
   text-align: left;
-  padding: 40px;
+  position: relative;
 }
 .drawer .left .caption,
 .drawer .right .caption {
-  margin-top: 185px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+.drawer .left p,
+.drawer .right p {
+  margin-bottom: 38px;
 }
 #pub-ul {
   float: right;
@@ -256,8 +274,8 @@ a {
   margin-right: 150px;
 }
 #pub-ul li {
-  padding-top: 28px;
-  line-height: 28px;
+  padding-top: lineHeight2;
+  line-height: lineHeight2;
   clear: both;
 }
 #pub-ul li a {
@@ -275,9 +293,19 @@ a {
 }
 .cart {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 18px;
+  right: 25px;
   z-index: 150;
+}
+.exit-drawer {
+  top: -55px;
+  right: 5px;
+  position: absolute;
+  z-index: 160;
+  display: inline-block;
+  font: 20px 'sp0001';
+  color: #fff;
+  cursor: pointer;
 }
 .cartbtn,
 .addcartbtn,
@@ -384,12 +412,16 @@ p {
 #ball:hover {
   color: #2b180b;
 }
+#octane:hover {
+  color: #f00;
+}
 #library-img,
 #hawlin-img,
 #jazz-img,
 #sega-img,
 #navsegda-img,
-#ball-img {
+#ball-img,
+#octane-img {
   display: none;
 }
 .bglibrary {
@@ -411,6 +443,9 @@ p {
 }
 .bgball {
   background-color: #f5f5dc;
+}
+.bgoctane {
+  background-color: #ffa500;
 }
 .bgfadelibrary {
   color: #fff;
@@ -456,16 +491,24 @@ p {
   -o-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
+.bgfadeoctane {
+  background-color: #ffa500;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
 /*slides    */
 #hawlin-gallery,
 #jazz-gallery,
 #sega-gallery,
 #navsegda-gallery,
-#ball-gallery {
+#ball-gallery,
+#octane-gallery {
   position: absolute;
   overflow: hidden;
   display: none;
-  z-index: 150;
+  z-index: 160;
   width: 100%;
   height: 100%;
   top: 0;
@@ -498,6 +541,10 @@ p {
 }
 .imgslide {
   display: none;
+}
+.sold-out {
+  text-decoration: line-through;
+  margin-left: 10px;
 }
 input {
   border: 0px;

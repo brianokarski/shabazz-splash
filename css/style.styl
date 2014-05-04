@@ -2,16 +2,17 @@ font-size = 20px
 font = font-size 'sp0001'
 fontAlt = font-size 'sp0002', Times, serif
 lineHeight = 28px
-lineHeight2 = 28px
+lineHeightalt = 38px
 letterSpacing = .02em
 opacityOut = opacity .25s ease-out
 transitionAll = all .25s
 transitionOut = all .15s ease-out
 transformScale = translateZ(1) scale(1.0, 1.0)
 textColor = #000
+hoverColor = #fff
+guideColor= #f775f0
 fittyPer = 50%
 translateFitty = translate(-50%, -50%)
-hoverColor = #fff
 menuWidth = 500px
 imgResize = 85%
 box-shadow(args...)
@@ -106,9 +107,10 @@ body
   transform transformScale
   width 1px
   height 100%
-  background-color #f775f0
-  position fixed
-  z-index 149
+  background-color guideColor
+  position absolute
+  z-index 250
+  cursor ew-resize
 
 .mobile-pub
   display  none
@@ -118,7 +120,7 @@ li
   margin-right  10px 
   position  relative 
   padding-right  0.5em 
-  line-height lineHeight2
+  line-height lineHeight
 
 a
   color inherit
@@ -140,16 +142,18 @@ a
 
 .logo
   position fixed
-  z-index 99999
+  z-index 160
   top 19px
   height 25px
-  width 200px
+  width 210px
   left 40px
   display inline-block
   font-size 20px
   color black
   .info
     cursor pointer
+    color white
+
   
 
 .active
@@ -158,37 +162,44 @@ a
 
 .drawer
   font fontAlt
+  -webkit-font-smoothing antialiased
   font-size 30px
-  line-height 38px
-  height 420px
+  line-height lineHeightalt
+  height 430px
   width 100%
   left 0px
   right 0px
-  top -470px
+  top -495px
   background-color black
   position fixed
   color #fff
   text-align center
-  padding-top 50px
-  z-index 148
+  padding-top 65px
+  z-index 151
   backFace hidden
   a
     display inline-block
     border-bottom 1px solid
-    border-bottom-color white
+    border-bottom-color red
     margin-bottom -15px
+    transition transitionOut
+    &:hover
+      color red
   .left
   .right
-    width 45%
     float left
+    height 400px
+    width calc(50% - 65px)
+    margin 8px 25px 0 40px
     text-align left
-    padding 40px
+    position relative
     .caption
-      margin-top 185px
-  .left
-    // border-right 1px solid
-    // border-right-color pink
-    // padding-bottom 20px
+      position absolute
+      bottom 20px
+      left 0
+    p
+      margin-bottom lineHeightalt
+
 
 
 #pub-ul
@@ -211,9 +222,19 @@ a
 
 .cart
   position absolute
-  top 10px
-  right 15px
+  top 18px
+  right 25px
   z-index 150
+
+.exit-drawer
+  top -55px
+  right 5px
+  position absolute
+  z-index 160
+  display inline-block
+  font font
+  color white
+  cursor pointer
 
 .cartbtn
 .addcartbtn
@@ -315,12 +336,17 @@ p
   &:hover
     color #2b180b
 
+#octane
+  &:hover
+    color red
+
 #library-img
 #hawlin-img
 #jazz-img
 #sega-img
 #navsegda-img
 #ball-img
+#octane-img
     display none
 
 .bglibrary
@@ -337,6 +363,8 @@ p
   background-color navsegdaBg
 .bgball
   background-color ballBg
+.bgoctane
+  background-color orange
 
 .bgfadelibrary
   color hoverColor
@@ -358,6 +386,9 @@ p
 .bgfadeball
   background-color ballBg
   transition transitionOut
+.bgfadeoctane
+  background-color orange
+  transition transitionOut
 
 
 /*slides    */
@@ -367,10 +398,11 @@ p
 #sega-gallery
 #navsegda-gallery
 #ball-gallery
+#octane-gallery
     position absolute
     overflow hidden
     display none
-    z-index 150
+    z-index 160
     width 100%
     height 100%
     top 0
@@ -398,6 +430,9 @@ p
 .imgslide
   display none
 
+.sold-out
+  text-decoration line-through
+  margin-left 10px
 
 input
   border 0px
