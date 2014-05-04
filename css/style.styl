@@ -46,6 +46,8 @@ jazzBg = white
 segaBg = pink
 navsegdaBg = grey
 ballBg = beige
+octaneBg = black
+selectionColor = red
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
   border 0
@@ -109,36 +111,15 @@ body
   height 100%
   background-color guideColor
   position absolute
-  z-index 250
+  z-index 160
   cursor ew-resize
 
 .mobile-pub
   display  none
 
-li 
-  display  block 
-  margin-right  10px 
-  position  relative 
-  padding-right  0.5em 
-  line-height lineHeight
-
 a
   color inherit
   text-decoration none
-
-.shabazz-intro
-#pub-ul
-  padding-top  10px
-  margin-left 15px
-  width menuWidth
-  text-align left
-  
-
-.shabazz-intro
-  float left
-  a:hover
-    color hoverColor
-    border-bottom: 2px solid hoverColor
 
 .logo
   position fixed
@@ -146,7 +127,7 @@ a
   top 19px
   height 25px
   width 210px
-  left 40px
+  left 20px
   display inline-block
   font-size 20px
   color black
@@ -154,17 +135,14 @@ a
     cursor pointer
     color white
 
-  
-
 .active
   color white
-
 
 .drawer
   font fontAlt
   -webkit-font-smoothing antialiased
   font-size 30px
-  line-height lineHeightalt
+  line-height 36px
   height 430px
   width 100%
   left 0px
@@ -177,6 +155,7 @@ a
   padding-top 65px
   z-index 151
   backFace hidden
+  overflow hidden
   a
     display inline-block
     border-bottom 1px solid
@@ -189,42 +168,16 @@ a
   .right
     float left
     height 400px
-    width calc(50% - 65px)
-    margin 8px 25px 0 40px
+    width calc(50% - 45px)
+    margin 8px 25px 0 20px
     text-align left
     position relative
     .caption
       position absolute
-      bottom 20px
+      bottom 38px
       left 0
     p
       margin-bottom lineHeightalt
-
-
-
-#pub-ul
-  float right
-  display  block
-  margin-right 150px
-  li
-    padding-top lineHeight2
-    line-height lineHeight2
-    clear both
-    a
-      display block
-    img
-      max-width 60px
-      float left
-      margin-right 10px
-
-.thumb
-  box-shadow rgba(0, 0, 0, 0.3) 3px 3px 7px
-
-.cart
-  position absolute
-  top 18px
-  right 25px
-  z-index 150
 
 .exit-drawer
   top -55px
@@ -235,6 +188,60 @@ a
   font font
   color white
   cursor pointer
+
+
+
+#pub-ul
+  position absolute
+  top fittyPer
+  left fittyPer
+  transform translateFitty
+  transform transformScale
+  width 420px
+  text-align center
+  margin-top -15px
+  li
+    font-size 24px
+    padding-top 5px
+    line-height 37px
+    clear both
+    margin-bottom -8px
+    a
+      display block
+      transition transitionOut
+    img
+      max-width 60px
+      float left
+      margin-right 10px
+    br
+      line-height lineHeight
+
+sup
+  font-size 13px
+  text-transform uppercase
+  display inline-block
+  position relative
+  top 10px
+  line-height 6px
+  margin-bottom -30px
+
+.booktitle + sup
+  font-size 13px
+  text-transform uppercase
+  display inline-block
+  position relative
+  top -5px
+  line-height 6px
+  margin-bottom -30px
+
+.thumb
+  box-shadow rgba(0, 0, 0, 0.3) 3px 3px 7px
+
+.cart
+  position absolute
+  top 18px
+  right 25px
+  z-index 150
 
 .cartbtn
 .addcartbtn
@@ -269,11 +276,6 @@ a
   bottom 15px
   left 15px
 
-.sp-intro
-  margin-top -(lineHeight)
-
-
-.sp-intro a
 .udln
 form.addtocart
 .shabazz-intro a
@@ -318,7 +320,7 @@ p
 
 #hawlin
   &:hover
-    color white
+    color skyblue
 
 #jazz
   &:hover
@@ -338,7 +340,7 @@ p
 
 #octane
   &:hover
-    color red
+    color black
 
 #library-img
 #hawlin-img
@@ -353,7 +355,7 @@ p
   color hoverColor
   background-color textColor
 .bghawlin
-  color hoverColor
+  color red
   background-color hawlinBg
 .bgjazz
   background-color jazzBg
@@ -364,7 +366,8 @@ p
 .bgball
   background-color ballBg
 .bgoctane
-  background-color orange
+  color hoverColor
+  background-color octaneBg
 
 .bgfadelibrary
   color hoverColor
@@ -387,7 +390,8 @@ p
   background-color ballBg
   transition transitionOut
 .bgfadeoctane
-  background-color orange
+  color hoverColor !important
+  background-color octaneBg
   transition transitionOut
 
 
@@ -593,7 +597,7 @@ input
   .minicart-quantity
     position absolute
     top -4px
-    left 430px
+    left 462px
     width 24px
     height 21px
     padding 0px 4px
@@ -611,7 +615,7 @@ input
   .minicart-remove
     position absolute
     top -7px
-    left 462px
+    left 493px
     width 18px
     height 23px
     margin 0
@@ -655,14 +659,17 @@ p.minicart-empty-text
     font-weight normal
     font-style normal
 
-
-
-
 @font-face
     font-family 'sp0002'
     src url('../font/sp002.woff') format('woff')
     font-weight normal
     font-style normal
+
+::selection 
+    background selectionColor
+
+::-moz-selection 
+    background selectionColor
 
 
 
