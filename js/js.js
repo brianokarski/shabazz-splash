@@ -6,8 +6,20 @@ $(document).ready(function() {
     $('#intro-page').delay(1000).fadeOut(400);
 
     $(".info").click(function () {
-        $(this).toggleClass( "active" );
-        $(".drawer").slideToggle("fast");
+        $(".logo").addClass( "active" );
+        $(".drawer").show();
+        $(".drawer").animate({
+            top: "0px",
+            display: "block"
+        }, 200);
+
+        $(".drawer").click(function () {
+            $(".logo").removeClass( "active" );
+            $(".drawer").animate({
+                top: "-536px",
+                display: "block"
+            }, 200);
+        });
     });
 
     $(".drawer").click(function () {
