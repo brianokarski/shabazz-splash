@@ -78,12 +78,13 @@ table
 
 html
   background-color #ff0918
+  overflow hidden
 
 body
   font font
   line-height  lineHeight
   letter-spacing  letterSpacing
-  min-width 1200px
+  min-width 900px
 
 #intro-page
   position absolute
@@ -145,6 +146,7 @@ a
   line-height 36px
   height 430px
   width 100%
+  min-width 930px
   left 0px
   right 0px
   top -495px
@@ -273,8 +275,8 @@ sup
 .carttwo
 #info
   position absolute
-  bottom 15px
-  left 15px
+  bottom 20px
+  left 20px
 
 .udln
 form.addtocart
@@ -355,7 +357,7 @@ p
   color hoverColor
   background-color textColor
 .bghawlin
-  color red
+  color hoverColor
   background-color hawlinBg
 .bgjazz
   background-color jazzBg
@@ -428,8 +430,8 @@ p
 
 .slide-title
   position absolute
-  top 10px
-  left 15px
+  top 19px
+  left 20px
 
 .imgslide
   display none
@@ -677,11 +679,34 @@ p.minicart-empty-text
 
 /* breakpoint 1 */
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1247px) {
 
-    html{
-        background-color: #e6000e;
-    }
+.drawer {
+font: 20px 'sp0002', Times, serif;
+-webkit-font-smoothing: antialiased;
+font-size: 25px;
+line-height: 28px;
+height: 380px;
+width: 100%;
+left: 0px;
+right: 0px;
+top: -495px;
+background-color: #000;
+position: fixed;
+color: #fff;
+text-align: center;
+padding-top: 65px;
+z-index: 151;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+overflow: hidden;
+}
+
+.drawer .right .caption {
+position: absolute;
+bottom: 80px;
+left: 0;
+}
 
 }
 
@@ -690,10 +715,6 @@ p.minicart-empty-text
 
 @media screen and (max-width: 768px) {
 
-    html{
-        background-color: #c4000c;
-    }
-
 }
 
 /* breakpoint 3 */
@@ -701,27 +722,41 @@ p.minicart-empty-text
 
 @media (max-width: 500px) and (min-width: 0px) {
 
-    html{
-        background-color: #a2000a;
+
+
+}
+
+/* air */
+
+
+@media screen and (max-height: 760px) {
+
+    #pub-ul{
+      width: 360px;
     }
 
+    #pub-ul li {
+      font-size: 20px;
+      padding-top: 5px;
+      line-height: 29px;
+      clear: both;
+      margin-bottom: -8px;
+    }
+
+    sup{
+      top: 7px;
+    }
 }
 
 /* ipad */
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
 
-    html{
-        background-color: #800008;
-    }
 
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
 
-    html{
-        background-color: #5e0006;
-    }
 
 }
 
@@ -733,9 +768,6 @@ p.minicart-empty-text
 /* sp (portrait) ----------- */
 @media only screen and (max-width : 320px) {
 
-    html{
-        background-color: #ff0918;
-    }
 
     body {
         font-family: Helvetica, sans-serif;
