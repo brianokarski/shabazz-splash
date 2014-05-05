@@ -802,6 +802,18 @@ p.minicart-empty-text {
   margin-top: 50px;
   margin-bottom: 2px;
 }
+
+/* NEW NEED STYLUS */
+
+.drawer{
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+
+
 /* fonts */
 @font-face {
   font-family: 'sp0001';
