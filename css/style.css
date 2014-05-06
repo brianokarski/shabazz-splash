@@ -790,9 +790,20 @@ input {
 }
 #PPMiniCart .minicart-submit {
   position: absolute;
-  bottom: 12px;
+  bottom: 14px;
   right: 10px;
   cursor: pointer;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+#PPMiniCart .minicart-submit:hover {
+  color: #f00;
+}
+#PPMiniCart .minicart-submit:active {
+  border-bottom: 2px solid;
+  border-color: inherit;
 }
 #PPMiniCart .minicart-submit img {
   vertical-align: middle;

@@ -626,9 +626,15 @@ input
     color red
   .minicart-submit
     position absolute
-    bottom 12px
+    bottom 14px
     right 10px
     cursor pointer
+    transition transitionOut
+    &:hover
+      color red
+    &:active
+      border-bottom 2px solid
+      border-color inherit      
     img
       vertical-align middle
       padding 4px 0 0 2px

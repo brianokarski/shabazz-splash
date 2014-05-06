@@ -1994,7 +1994,7 @@
                 styles: '',
 
                 strings: {
-                    button: 'Check out with Paypal ➝',
+                    button: 'Check out with Paypal ↗',
                     subtotal: 'Subtotal:',
                     discount: 'Discount:',
                     processing: 'Processing...',
