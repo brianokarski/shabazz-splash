@@ -49,9 +49,8 @@ $(document).ready(function() {
         }, 0).addClass("bg" + link_id);
 
         //start slideshow
-        $('#' + link_id + '-gallery .box').append('<img src="./img/' + link_id + '/1.jpg"><img src="./img/' + link_id + '/2.jpg"><img src="./img/' + link_id + '/3.jpg"><img src="./img/' + link_id + '/4.jpg">');
-        
-        //<img src="./img/' + link_id + '/4.jpg"><img src="./img/' + link_id + '/5.jpg"><img src="./img/' + link_id + '/6.jpg"><img src="./img/' + link_id + '/7.jpg"><img src="./img/' + link_id + '/8.jpg">
+        $('#' + link_id + '-gallery .box').append('<img src="./img/' + link_id + '/1.jpg"><img src="./img/' + link_id + '/2.jpg"><img src="./img/' + link_id + '/3.jpg"><img src="./img/' + link_id + '/4.png">');
+    
 
         //next slide
         $('.box img').click(function() {
