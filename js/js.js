@@ -24,7 +24,7 @@ $(document).ready(function() {
     });
 
 
-    $(".pub-a, .intro-a").hover(function() {
+    $(".pub-a").hover(function() {
             link_id = $(this).attr('id');
             $("html").addClass("bgfade" + link_id);
             $("#" + link_id + "-img").show();

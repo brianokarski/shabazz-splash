@@ -213,7 +213,7 @@ a {
   color: #fff;
   text-align: center;
   padding-top: 65px;
-  z-index: 150;
+  z-index: 151;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   overflow: hidden;
@@ -241,9 +241,6 @@ a {
   margin: 8px 25px 0 20px;
   text-align: left;
   position: relative;
-  top: inherit;
-  left: inherit;
-  z-index: 200;
 }
 .drawer .left .caption,
 .drawer .right .caption {
@@ -407,9 +404,6 @@ p {
   -moz-transform: translateZ(1) scale(1, 1);
   -o-transform: translateZ(1) scale(1, 1);
   transform: translateZ(1) scale(1, 1);
-}
-#img-container #library-img {
-  z-index: 152;
 }
 .imgdisplay {
   display: visible;
