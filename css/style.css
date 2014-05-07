@@ -296,23 +296,21 @@ a {
 #pub-ul li br {
   line-height: 28px;
 }
-sup {
+.cat-num {
   font-size: 13px;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  top: 10px;
+  top: 4px;
   line-height: 6px;
-  margin-bottom: -30px;
 }
-.booktitle + sup {
+.by {
   font-size: 13px;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  top: -5px;
-  line-height: 6px;
-  margin-bottom: -30px;
+  top: -3px;
+  line-height: 5px;
 }
 .thumb {
   -webkit-box-shadow: rgba(0,0,0,0.3) 3px 3px 7px;
@@ -790,9 +788,20 @@ input {
 }
 #PPMiniCart .minicart-submit {
   position: absolute;
-  bottom: 12px;
+  bottom: 14px;
   right: 10px;
   cursor: pointer;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+#PPMiniCart .minicart-submit:hover {
+  color: #f00;
+}
+#PPMiniCart .minicart-submit:active {
+  border-bottom: 2px solid;
+  border-color: inherit;
 }
 #PPMiniCart .minicart-submit img {
   vertical-align: middle;
@@ -802,18 +811,6 @@ p.minicart-empty-text {
   margin-top: 50px;
   margin-bottom: 2px;
 }
-
-/* NEW NEED STYLUS */
-
-.drawer{
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-
-
-
 /* fonts */
 @font-face {
   font-family: 'sp0001';
@@ -865,6 +862,15 @@ p.minicart-empty-text {
   .drawer .right p {
     margin-bottom: 25px;
   }
+  .booktitle + sup {
+    font-size: 11px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    line-height: 6px;
+    margin-bottom: -30px;
+  }
   .email {
     font: 20px 'sp0002', Times, serif;
     font-size: 24px;
@@ -915,7 +921,7 @@ p.minicart-empty-text {
   }
   #pub-ul li {
     font-size: 20px;
-    padding-top: 5px;
+    padding-top: 10px;
     line-height: 29px;
     clear: both;
     margin-bottom: -8px;
