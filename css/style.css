@@ -194,6 +194,10 @@ a {
   cursor: pointer;
   color: #fff;
 }
+.logo .active {
+  color: #f775f0;
+  font-weight: bold;
+}
 .active {
   color: #fff;
 }
@@ -252,16 +256,6 @@ a {
 .drawer .right p {
   margin-bottom: 38px;
 }
-.exit-drawer {
-  top: -55px;
-  right: 5px;
-  position: absolute;
-  z-index: 160;
-  display: inline-block;
-  font: 20px 'sp0001';
-  color: #fff;
-  cursor: pointer;
-}
 #pub-ul {
   position: absolute;
   top: 50%;
@@ -296,28 +290,21 @@ a {
 #pub-ul li br {
   line-height: 28px;
 }
-sup {
+.cat-num {
   font-size: 13px;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  top: 10px;
+  top: 4px;
   line-height: 6px;
-  margin-bottom: -30px;
 }
-.booktitle + sup {
+.by {
   font-size: 13px;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  top: -5px;
-  line-height: 6px;
-  margin-bottom: -30px;
-}
-.thumb {
-  -webkit-box-shadow: rgba(0,0,0,0.3) 3px 3px 7px;
-  -moz-box-shadow: rgba(0,0,0,0.3) 3px 3px 7px;
-  box-shadow: rgba(0,0,0,0.3) 3px 3px 7px;
+  top: -3px;
+  line-height: 5px;
 }
 .cart {
   position: absolute;
@@ -415,19 +402,19 @@ p {
   color: #87ceeb;
 }
 #jazz:hover {
-  color: #f00;
+  color: #e6e3dd;
 }
 #sega:hover {
-  color: #00f;
+  color: #529a4a;
 }
 #navsegda:hover {
-  color: #800000;
+  color: #6a7ea8;
 }
 #ball:hover {
-  color: #2b180b;
+  color: #290090;
 }
 #octane:hover {
-  color: #000;
+  color: #f22c4c;
 }
 #library-img,
 #hawlin-img,

@@ -5,24 +5,25 @@ $(document).ready(function() {
     $('#intro-page').delay(1000).fadeOut(400);
     $( ".guide" ).draggable({ axis: 'x' });
 
-    $(".info").click(function () {
-        $(".logo").addClass( "active" );
-        $(".drawer").show();
-        $(".drawer").animate({
-            top: "0px",
-            display: "block"
-        }, 200);
-    });
-
-
-    $(".exit").click(function () {
-        $(".logo").removeClass( "active" );
+    $(".info").click( function(event){
+    event.preventDefault();
+    if ($(".drawer").hasClass("isOpen") ) {
+        $(".logo, .info").removeClass( "active" );
         $(".drawer").animate({
             top: "-536px",
             display: "block"
-        }, 200);
+        }, 200);          
+        $(".drawer").removeClass("isOpen");
+    } else {
+        $(".logo, .info").addClass( "active" );
+        $(".drawer").animate({
+            top: "0px",
+            display: "block"
+        }, 200);   
+        $(".drawer").addClass("isOpen");
+    }
+    return false;
     });
-
 
     $(".pub-a").hover(function() {
             link_id = $(this).attr('id');

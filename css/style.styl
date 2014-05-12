@@ -135,6 +135,9 @@ a
   .info
     cursor pointer
     color white
+  .active
+    color guideColor
+    font-weight bold
 
 .active
   color white
@@ -182,18 +185,6 @@ a
     p
       margin-bottom lineHeightalt
 
-.exit-drawer
-  top -55px
-  right 5px
-  position absolute
-  z-index 160
-  display inline-block
-  font font
-  color white
-  cursor pointer
-
-
-
 #pub-ul
   position absolute
   top fittyPer
@@ -218,26 +209,21 @@ a
     br
       line-height lineHeight
 
-sup
+.cat-num
   font-size 13px
   text-transform uppercase
   display inline-block
   position relative
-  top 10px
+  top 4px
   line-height 6px
-  margin-bottom -30px
 
-.booktitle + sup
+.by
   font-size 13px
   text-transform uppercase
   display inline-block
   position relative
-  top -5px
-  line-height 6px
-  margin-bottom -30px
-
-.thumb
-  box-shadow rgba(0, 0, 0, 0.3) 3px 3px 7px
+  top -3px
+  line-height 5px
 
 .cart
   position absolute
@@ -326,23 +312,23 @@ p
 
 #jazz
   &:hover
-    color red
+    color #e6e3dd
 
 #sega
   &:hover
-    color blue
+    color #529a4a
 
 #navsegda
   &:hover
-    color maroon
+    color navsegdaBg
 
 #ball
   &:hover
-    color #2b180b
+    color #290090
 
 #octane
   &:hover
-    color black
+    color #f22c4c
 
 #library-img
 #hawlin-img
