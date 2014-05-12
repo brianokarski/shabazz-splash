@@ -296,21 +296,23 @@ a {
 #pub-ul li br {
   line-height: 28px;
 }
-.cat-num {
+sup {
   font-size: 13px;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  top: 4px;
+  top: 10px;
   line-height: 6px;
+  margin-bottom: -30px;
 }
-.by {
+.booktitle + sup {
   font-size: 13px;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  top: -3px;
-  line-height: 5px;
+  top: -5px;
+  line-height: 6px;
+  margin-bottom: -30px;
 }
 .thumb {
   -webkit-box-shadow: rgba(0,0,0,0.3) 3px 3px 7px;
@@ -921,7 +923,7 @@ p.minicart-empty-text {
   }
   #pub-ul li {
     font-size: 20px;
-    padding-top: 10px;
+    padding-top: 5px;
     line-height: 29px;
     clear: both;
     margin-bottom: -8px;
